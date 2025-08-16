@@ -1,83 +1,82 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Neha Baghele - Portfolio</title>
-  </head>
-  <body>
-    <h1>Neha Baghele</h1>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Recipe Card</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1> Interactive Recipe Card</h1>
+    <p>A fluffy, rich classic you can bake anytime.</p>
+    <p><strong>⏱ Prep Time:</strong> 45 minutes | <strong>🍽 Serves:</strong> 4</p>
+  </header>
 
-    <section>
-      <h2>About Me</h2>
-      <p>
-        BTech Computer Science student with a passion for web development,
-        problem-solving, and creating real-world tech solutions. Eager to
-        contribute to impactful projects and grow as a developer.
-      </p>
+  <main class="card">
+    <section class="hero">
+      <img src="https://images.unsplash.com/photo-1542826438-bd32f43d626f?q=80&w=1200&auto=format&fit=crop"
+           alt="Chocolate cake" />
     </section>
 
-    <section>
-      <h2>Skills</h2>
+    <!-- Progress bar -->
+    <div class="progress">
+      <span id="progressBar"></span>
+    </div>
+
+    <!-- Start cooking button -->
+    <div class="controls">
+      <button id="startCooking">🍴 Start Cooking</button>
+      <button id="toggleIngredients">🧺 Ingredients</button>
+      <button id="toggleEquipment">📦 Equipment</button>
+    </div>
+
+    <!-- Hidden sections -->
+    <section id="ingredients" class="hidden">
+      <h2>🧺 Ingredients</h2>
       <ul>
-        <li>HTML, CSS, JavaScript</li>
-        <li>C++, C</li>
-        <li>Git, GitHub, Canva</li>
+        <li>1½ cups flour</li>
+        <li>1 cup sugar</li>
+        <li>½ cup cocoa powder</li>
+        <li>1 tsp baking soda</li>
+        <li>1 cup milk</li>
       </ul>
+    </section>
 
-      <h2>Interests</h2>
+    <section id="equipment" class="hidden">
+      <h2>📦 Equipment</h2>
       <ul>
-        <li>Web Development</li>
-        <li>Open Source Contributions</li>
-        <li>Participating in Hackathons</li>
-        <li>Travelling and Photography</li>
+        <li>Mixing bowl</li>
+        <li>Whisk</li>
+        <li>Cake pan</li>
+        <li>Oven</li>
       </ul>
     </section>
 
-    <section>
-      <h2>Projects</h2>
-
-      <h3>Farmer Information Portal</h3>
-      <p>
-        A simple website that helps farmers with weather info, crop prices, and
-        language translation.<a
-          href="https://github.com/nehabaghele01/Farmer-Info-Portal"
-          >Project Link</a
-        >
-      </p>
-
-      <h3>Simon Says Game</h3>
-      <p>
-        Simon Says is a memory-based game where players repeat an increasingly
-        long sequence of colors or sounds shown by the system.<a
-          href="https://github.com/nehabaghele01/Simon-says-game"
-          >Project Link</a
-        >
-      </p>
-
-      <h3>To-Do-List</h3>
-      <p>
-        A simple to-do list app to add, manage, and track daily tasks
-        efficiently.<a
-          href="https://github.com/nehabaghele01/Project-To-Do-List"
-          >Project Link</a
-        >
-      </p>
+    <!-- Steps -->
+    <section id="steps">
+      <h2>👩‍🍳 Steps</h2>
+      <ol>
+        <li>Preheat oven to 180°C (350°F).</li>
+        <li>Mix dry ingredients together.</li>
+        <li>Add milk and oil; whisk until smooth.</li>
+        <li>Bake for 30 minutes and enjoy!</li>
+      </ol>
+      <button id="nextStep">➡ Next Step</button>
     </section>
 
-    <section>
-      <h2>Contact Information</h2>
-      <p>Email: nehabaghele007@gmail.com</p>
-      <p>
-        GitHub:
-        <a href="https://github.com/nehabaghele01"
-          >https://github.com/nehabaghele</a
-        >
-      </p>
-      <p>
-        LinkedIn:
-        <a href="https://www.linkedin.com/in/neha-baghele-621050268/"
-          >https://linkedin.com/in/neha-baghele</a
-        >
-      </p>
+    <!-- End message -->
+    <section id="endMessage" class="hidden">
+      <h2>🎉 Well Done!</h2>
+      <p>You’ve successfully completed this recipe. Time to enjoy your cake 🍰</p>
+      <button id="restart">🔄 Restart Recipe</button>
     </section>
-  </body>
+  </main>
+
+  <footer>
+    <p>© 2025 Quick Build Recipe Card | Built with HTML, CSS, and JavaScript</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
