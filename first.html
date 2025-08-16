@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Recipe Card</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1> Interactive Recipe Card</h1>
+    <p>A fluffy, rich classic you can bake anytime.</p>
+    <p><strong>⏱ Prep Time:</strong> 45 minutes | <strong>🍽 Serves:</strong> 4</p>
+  </header>
+
+  <main class="card">
+    <section class="hero">
+      <img src="https://images.unsplash.com/photo-1542826438-bd32f43d626f?q=80&w=1200&auto=format&fit=crop"
+           alt="Chocolate cake" />
+    </section>
+
+    <!-- Progress bar -->
+    <div class="progress">
+      <span id="progressBar"></span>
+    </div>
+
+    <!-- Start cooking button -->
+    <div class="controls">
+      <button id="startCooking">🍴 Start Cooking</button>
+      <button id="toggleIngredients">🧺 Ingredients</button>
+      <button id="toggleEquipment">📦 Equipment</button>
+    </div>
+
+    <!-- Hidden sections -->
+    <section id="ingredients" class="hidden">
+      <h2>🧺 Ingredients</h2>
+      <ul>
+        <li>1½ cups flour</li>
+        <li>1 cup sugar</li>
+        <li>½ cup cocoa powder</li>
+        <li>1 tsp baking soda</li>
+        <li>1 cup milk</li>
+      </ul>
+    </section>
+
+    <section id="equipment" class="hidden">
+      <h2>📦 Equipment</h2>
+      <ul>
+        <li>Mixing bowl</li>
+        <li>Whisk</li>
+        <li>Cake pan</li>
+        <li>Oven</li>
+      </ul>
+    </section>
+
+    <!-- Steps -->
+    <section id="steps">
+      <h2>👩‍🍳 Steps</h2>
+      <ol>
+        <li>Preheat oven to 180°C (350°F).</li>
+        <li>Mix dry ingredients together.</li>
+        <li>Add milk and oil; whisk until smooth.</li>
+        <li>Bake for 30 minutes and enjoy!</li>
+      </ol>
+      <button id="nextStep">➡ Next Step</button>
+    </section>
+
+    <!-- End message -->
+    <section id="endMessage" class="hidden">
+      <h2>🎉 Well Done!</h2>
+      <p>You’ve successfully completed this recipe. Time to enjoy your cake 🍰</p>
+      <button id="restart">🔄 Restart Recipe</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Quick Build Recipe Card | Built with HTML, CSS, and JavaScript</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
