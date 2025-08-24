@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editkaro.in - Portfolio</title>
+    <link rel="stylesheet" href="task3.css" />
+
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  </head>
+  <body>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="video-background">
+        <iframe
+          src="https://www.youtube.com/embed/ScMzIvxBSi4?autoplay=1&mute=1&loop=1&playlist=ScMzIvxBSi4"
+          frameborder="0"
+          allow="autoplay; fullscreen"
+          class="hero-bg"
+        >
+        </iframe>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content" data-aos="fade-up">
+        <h1>Editkaro.in</h1>
+        <p>Crafting Stories Through Powerful Video Edits</p>
+        <a href="#portfolio" class="btn">See Our Work</a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" data-aos="fade-up">
+      <h2>About Us</h2>
+      <p>
+        Editkaro.in is a creative social media marketing & video editing agency.
+        From YouTube edits to short viral reels, football highlights to
+        cinematic ads — we turn your raw footage into engaging content that
+        connects with millions.
+      </p>
+    </section>
+
+    <!-- NAV -->
+    <nav class="filter-nav" data-aos="fade-up">
+      <button onclick="filterVideos('all')">All</button>
+      <button onclick="filterVideos('short')">Short Form</button>
+      <button onclick="filterVideos('long')">Long Form</button>
+      <button onclick="filterVideos('gaming')">Gaming</button>
+      <button onclick="filterVideos('football')">Football</button>
+      <button onclick="filterVideos('ecommerce')">E-commerce</button>
+      <button onclick="filterVideos('documentary')">Documentary</button>
+      <button onclick="filterVideos('color')">Color Grading</button>
+      <button onclick="filterVideos('anime')">Anime</button>
+      <button onclick="filterVideos('ads')">Ads</button>
+    </nav>
+
+    <!-- PORTFOLIO GRID -->
+    <section id="portfolio" class="gallery">
+      <div
+        class="video-card short"
+        data-aos="zoom-in"
+        data-video="https://www.youtube.com/embed/ysz5S6PUM-U"
+      >
+        <img
+          src="https://img.youtube.com/vi/ysz5S6PUM-U/hqdefault.jpg"
+          alt="Short Form"
+        />
+        <h3>Short Form</h3>
+      </div>
+      <div
+        class="video-card long"
+        data-aos="fade-up"
+        data-video="https://www.youtube.com/embed/ScMzIvxBSi4"
+      >
+        <img
+          src="https://img.youtube.com/vi/ScMzIvxBSi4/hqdefault.jpg"
+          alt="Long Form"
+        />
+        <h3>Long Form</h3>
+      </div>
+      <div
+        class="video-card gaming"
+        data-aos="fade-right"
+        data-video="https://www.youtube.com/embed/tgbNymZ7vqY"
+      >
+        <img
+          src="https://img.youtube.com/vi/tgbNymZ7vqY/hqdefault.jpg"
+          alt="Gaming"
+        />
+        <h3>Gaming</h3>
+      </div>
+      <div
+        class="video-card football"
+        data-aos="fade-left"
+        data-video="https://www.youtube.com/embed/aqz-KE-bpKQ"
+      >
+        <img
+          src="https://img.youtube.com/vi/aqz-KE-bpKQ/hqdefault.jpg"
+          alt="Football"
+        />
+        <h3>Football</h3>
+      </div>
+      <div
+        class="video-card ecommerce"
+        data-aos="zoom-in"
+        data-video="https://www.youtube.com/embed/dQw4w9WgXcQ"
+      >
+        <img
+          src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg"
+          alt="E-commerce"
+        />
+        <h3>E-commerce</h3>
+      </div>
+      <div
+        class="video-card documentary"
+        data-aos="fade-up"
+        data-video="https://www.youtube.com/embed/C0DPdy98e4c"
+      >
+        <img
+          src="https://img.youtube.com/vi/C0DPdy98e4c/hqdefault.jpg"
+          alt="Documentary"
+        />
+        <h3>Documentary</h3>
+      </div>
+      <div
+        class="video-card color"
+        data-aos="fade-right"
+        data-video="https://www.youtube.com/embed/sBws8MSXN7A"
+      >
+        <img
+          src="https://img.youtube.com/vi/sBws8MSXN7A/hqdefault.jpg"
+          alt="Color Grading"
+        />
+        <h3>Color Grading</h3>
+      </div>
+      <div
+        class="video-card anime"
+        data-aos="fade-left"
+        data-video="https://www.youtube.com/embed/1roy4o4tqQM"
+      >
+        <img
+          src="https://img.youtube.com/vi/1roy4o4tqQM/hqdefault.jpg"
+          alt="Anime"
+        />
+        <h3>Anime</h3>
+      </div>
+      <div
+        class="video-card ads"
+        data-aos="zoom-in"
+        data-video="https://www.youtube.com/embed/3fumBcKC6RE"
+      >
+        <img
+          src="https://img.youtube.com/vi/3fumBcKC6RE/hqdefault.jpg"
+          alt="Ads"
+        />
+        <h3>Ads</h3>
+      </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+      <span onclick="closeLightbox()">&times;</span>
+      <iframe
+        id="lightboxVideo"
+        frameborder="0"
+        allow="autoplay; fullscreen"
+      ></iframe>
+    </div>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials" data-aos="fade-up">
+      <h2>What Our Clients Say</h2>
+      <div class="testimonial-container">
+        <div class="testimonial">
+          <p>"Editkaro.in took our ad campaign to the next level!"</p>
+          <h4>- Brand A</h4>
+        </div>
+        <div class="testimonial">
+          <p>"Their edits boosted our engagement on Instagram like crazy!"</p>
+          <h4>- Influencer B</h4>
+        </div>
+        <div class="testimonial">
+          <p>"Creative, fast, and reliable. Highly recommended!"</p>
+          <h4>- Startup C</h4>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" data-aos="fade-up">
+      <h2>Contact Us</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>
+        © 2025 Editkaro.in | Follow us on <a href="#">Instagram</a> |
+        <a href="#">YouTube</a> |
+        <a href="#">LinkedIn</a>
+      </p>
+    </footer>
+
+    <!-- JS -->
+    <script src="task3.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
